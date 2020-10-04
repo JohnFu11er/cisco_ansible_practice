@@ -1,0 +1,21 @@
+---
+  - name: CISCO CONFIG BUILDER
+    hosts: localhost
+    gather_facts: no
+
+    tasks:
+      - name: TASK 1 - IMPORT DEVICE VARIABLES
+        include_vars:
+          file: ./device_vars.yml
+          name: device_vars
+
+      - name: TASK 2 - CREATE FINISHED_CONFIGS DIRECTORY
+        file:
+          path: ./finished_router_configs
+          state: directory
+
+      - name: TASK 3 - BUILD CONFIG FILES FROM TEMPLATES
+        template:
+          src: ./templates/router_config.j2
+          dest: ./finished_router_configs/{{ item.key }}.cfg
+        loop: "{{ lookup('dict', device_vars['hostnames']) }}"
