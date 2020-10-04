@@ -26,7 +26,6 @@
           - '192.168.222.0'
       static_routes:
         - '0.0.0.0 0.0.0.0 192.168.222.1'
-
     Router_2:
       interfaces:
         FastEthernet0/0:
