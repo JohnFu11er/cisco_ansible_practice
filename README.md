@@ -1,7 +1,8 @@
 <h1> cisco_ansible_practice </h1>
-This is a project that demonstrates the interconnected nature of Jinja2 templates being dynamically populated by an Ansible playbook that parses the variable data from an imported .yml file.
+This is a project that demonstrates the interconnected nature of Jinja2 templates being dynamically populated by an Ansible playbook that parses the variable data from an imported .yml file.<br>
 <br>
 <b>PROCESS (main_build.yml)</b><br>
+<br>
 1. (TASK 1) The main_build.yml file imports the device_vars.yml.<br>
 2. (TASK 2) The main_build.yml file creates the ./finished_router_configs directoty that will be used to store the generated router config files from "TASK 3".<br>
 3. (TASK 3) The main_build.yml file uses the variables imported from the device_vars.yml file to populate the jinja2 template named router_config.j2<br>
