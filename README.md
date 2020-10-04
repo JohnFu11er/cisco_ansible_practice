@@ -1,5 +1,5 @@
 <h1> cisco_ansible_practice </h1>
-This is a project that demonstrates the interconnected nature of Jinja2 templates being dynamically populated by an Ansible playbook that parses the variable data from an imported .yml file.<br>
+This is a project that creates five configuration files for cisco routers.  It demonstrates the interconnected nature of Jinja2 templates being dynamically populated by an Ansible playbook that parses the variable data from an imported .yml file.<br>
 <br>
 <b>PROCESS (main_build.yml)</b><br>
 <br>
